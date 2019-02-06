@@ -9,19 +9,19 @@ import org.springframework.data.repository.CrudRepository;
 
 import java.util.Collection;
 import java.util.List;
-
+import java.util.Optional;
 import java.util.List;
 
 public interface Detail_Updatepage_Repository
-        extends JpaRepository<Detail_Updatepage, Long>, JpaSpecificationExecutor<Detail_Updatepage> {
+        extends JpaRepository<Detail_Updatepage, Integer>, JpaSpecificationExecutor<Detail_Updatepage> {
     // Login Check Username and Password
  
     /**
    *
    */
 
-  String GET_SUBMODULE="select callid,payunit,namecontact from gfmis_calllog where callid=?1 order by callid";
-    @Query(value = GET_SUBMODULE, nativeQuery = true)
-    Collection<Detail_Updatepage> findCallid(Integer callid);
+  String GET_DATA="SELECT *  FROM gfmis_calllog where callid=?1 ";
+    @Query(value = GET_DATA, nativeQuery = true)
+    Optional<Detail_Updatepage> findCallid(Integer callid);
 
 }
