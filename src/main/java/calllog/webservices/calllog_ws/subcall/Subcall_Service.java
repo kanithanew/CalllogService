@@ -17,5 +17,9 @@ public class Subcall_Service {
     public List<Subcall> retrieveSubcall(Integer callid) { 
         return (List<Subcall>) subcall_repository.findsubcall(callid);
     }
+    public Subcall postSubcall(Subcall detail) {
+        return subcall_repository.save(detail);
+    }
+
 
 }
