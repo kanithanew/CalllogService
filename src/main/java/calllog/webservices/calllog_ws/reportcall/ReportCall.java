@@ -1,4 +1,4 @@
-package calllog.webservices.calllog_ws.report_statuscall;
+package calllog.webservices.calllog_ws.reportcall;
 
 import lombok.Data;
 
@@ -11,7 +11,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Data
 @Entity
-public class Report_StatusCall {
+public class ReportCall {
   @Id
   private String  namecontact;
   private String payunit_name;
@@ -24,8 +24,8 @@ public class Report_StatusCall {
   private String submodulename;
   private String problem;
   private String createname;
-  private String helpdeskowner;
   private String forcedesc;
   private String chaneldesc;
   private String statuscall;
+  private String repname;
 	}
