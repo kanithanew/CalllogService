@@ -26,4 +26,12 @@ public class Subcall {
   private String subcallattach ;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date create_date; 
+  private String callusername;
+  
+  public String callusername() {
+    return null;
+}
+public void setcallusername(String callusername) {
+    this.callusername = callusername;
+}
 	}

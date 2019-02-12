@@ -14,12 +14,6 @@ import java.util.List;
 
 public interface Detail_Updatepage_Repository
         extends JpaRepository<Detail_Updatepage, Integer>, JpaSpecificationExecutor<Detail_Updatepage> {
-    // Login Check Username and Password
- 
-    /**
-   *
-   */
-
   String GET_DATA="SELECT *  FROM gfmis_calllog where callid=?1 ";
     @Query(value = GET_DATA, nativeQuery = true)
     Optional<Detail_Updatepage> findCallid(Integer callid);

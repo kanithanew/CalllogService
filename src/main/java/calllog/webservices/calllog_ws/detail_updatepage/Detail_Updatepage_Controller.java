@@ -24,8 +24,7 @@ public class Detail_Updatepage_Controller {
     }*/
     @PutMapping("/{callid}")
     public ResponseEntity<?> putCustomer(@PathVariable  Integer callid, @Valid @RequestBody Detail_Updatepage body) {
-        System.out.println(callid);
-        System.out.println(body);
+    
         Optional<Detail_Updatepage> customer = setail_updatepage_Service.updateData(callid, body);
         if (!customer.isPresent()) {
             return ResponseEntity.notFound().build();
