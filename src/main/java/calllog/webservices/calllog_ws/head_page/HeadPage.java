@@ -33,5 +33,6 @@ public class HeadPage {
   private String attach;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date closedate;
+  private String repname;
   
 	}

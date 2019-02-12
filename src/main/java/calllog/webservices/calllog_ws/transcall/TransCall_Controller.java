@@ -1,4 +1,4 @@
-package calllog.webservices.calllog_ws.head_page;
+package calllog.webservices.calllog_ws.transcall;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,14 +11,15 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/headpage")
-public class HeadPage_Controller {
+@RequestMapping("/transcall")
+public class TransCall_Controller {
 
     @Autowired
-    HeadPage_Service headpage_Service;
+    TransCall_Service  reportcall_Service;
 
     @GetMapping(params = "callid")
-    public List<HeadPage> getHomePage(@RequestParam(value = "callid") Integer callid) {
-        return headpage_Service.retrieveData(callid);
+    public List<TransCall> getLoginuser_TransCall(@RequestParam(value = "callid") Integer callid) {
+        return reportcall_Service.retrieveStatus_TransCall(callid);
     }
+
 }
