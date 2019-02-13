@@ -28,4 +28,5 @@ public class ReportCall {
   private String chaneldesc;
   private String statuscall;
   private String repname;
+  private String updateproblem;
 	}
