@@ -24,9 +24,8 @@ public class Subcall_Controller {
     }
     @PostMapping()
     public ResponseEntity<Subcall> postSubcall(@RequestBody Subcall body) {
-
         Subcall detail_editpage = subcall_Service.postSubcall(body); 
       return ResponseEntity.status(HttpStatus.CREATED).body(detail_editpage);
-   
+
     }
 }

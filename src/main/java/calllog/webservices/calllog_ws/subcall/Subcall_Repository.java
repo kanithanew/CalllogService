@@ -20,7 +20,7 @@ public interface Subcall_Repository
    *
    */
 
-    String GETDATA = " select a.*,b.callusername from gfmis_subcall a left join gfmis_staff b  on a.calllogin=b.calllogin where a.callid=?1 order by a.subcallid" ;
+    String GETDATA = " select a.*,b.callusername  as calllogin from gfmis_subcall a left join gfmis_staff b  on a.calllogin=b.calllogin where a.callid=?1 order by a.subcallid" ;
     @Query(value = GETDATA, nativeQuery = true)
     Collection<Subcall> findsubcall(Integer callid);
 
