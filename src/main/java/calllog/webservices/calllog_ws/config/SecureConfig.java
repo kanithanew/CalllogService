@@ -1,4 +1,4 @@
-package calllog.webservices.calllog_ws.config;
+/*package calllog.webservices.calllog_ws.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Configuration;
@@ -24,4 +24,4 @@ public class SecureConfig extends WebSecurityConfigurerAdapter {
                 .httpBasic();
     }
     
-}
+}*/
