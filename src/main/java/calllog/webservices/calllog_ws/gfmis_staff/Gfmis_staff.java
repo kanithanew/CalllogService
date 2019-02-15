@@ -13,7 +13,49 @@ import javax.persistence.Id;
 public class Gfmis_staff{
   @Id
    private String calllogin;
-   private String  callpassword;
-   private String  callusername;
-   private String  positionuser;
+   private String callpassword;
+  private String callusername;
+  private String positionuser;
+
+  /**
+   * @return the callpassword
+   */
+  public String getCallpassword() {
+    return callpassword;
+  }
+
+  /**
+   * @return the positionuser
+   */
+  public String getPositionuser() {
+    return positionuser;
+  }
+
+  /**
+   * @param positionuser the positionuser to set
+   */
+  public void setPositionuser(String positionuser) {
+    this.positionuser = positionuser;
+  }
+
+  /**
+   * @return the callusername
+   */
+  public String getCallusername() {
+    return callusername;
+  }
+
+  /**
+   * @param callusername the callusername to set
+   */
+  public void setCallusername(String callusername) {
+    this.callusername = callusername;
+  }
+
+  /**
+   * @param callpassword the callpassword to set
+   */
+  public void setCallpassword(String callpassword) {
+    this.callpassword = callpassword;
+  }
 	}

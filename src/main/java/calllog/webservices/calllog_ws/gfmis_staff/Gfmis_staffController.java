@@ -25,4 +25,8 @@ public class Gfmis_staffController {
     public List<Gfmis_staff> getLogin(@RequestParam(value = "calllogin") String calllogin) {
         return gfmis_staffService.retrieveGfmis_staff(calllogin);
     }
+    @GetMapping(params = "checkHD")
+    public List<Gfmis_staff> getHDUSER() {
+        return gfmis_staffService.retrieveGfmis_HD();
+    }
 }
