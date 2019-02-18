@@ -29,4 +29,9 @@ public class Gfmis_staffController {
     public List<Gfmis_staff> getHDUSER() {
         return gfmis_staffService.retrieveGfmis_HD();
     }
+        @GetMapping(params = "checkTecnic")
+    public List<Gfmis_staff> getTECUSER() {
+        return gfmis_staffService.retrieveGfmis_Tec();
+    }
+   
 }

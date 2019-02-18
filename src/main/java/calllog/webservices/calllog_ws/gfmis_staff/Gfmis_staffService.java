@@ -25,5 +25,8 @@ public class Gfmis_staffService {
     public List<Gfmis_staff> retrieveGfmis_HD() {
               return (List<Gfmis_staff>) gfmis_staffRepository.findHD();
     }
+    public List<Gfmis_staff> retrieveGfmis_Tec() {
+        return (List<Gfmis_staff>) gfmis_staffRepository.findTEC();
+}
 
 }
