@@ -13,6 +13,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
 public class TransCall {
   @Id
+  private Integer idlogprocess;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date  datetimesend;
   private String namerecord;
