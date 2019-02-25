@@ -46,7 +46,7 @@ public class Detail_Editpage {
   private Integer callmodule;
   private Integer callsubmodule;
   @JsonFormat(pattern="yyyy-MM-dd HH:mm:ss")
-  private java.util.Date  cretaedate ;//=  new Timestamp();
+  private java.util.Date  createdate ;//=  new Timestamp();
 public void setId(Object object) {
 }
 	}

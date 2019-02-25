@@ -21,7 +21,6 @@ public class Subcall {
   private Integer callid;
   private String updateproblem;
   private String calllogin;
-  private String subcallstatus;
   private String subcallattach;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date create_date;
@@ -45,20 +44,6 @@ public class Subcall {
    */
   public void setSubcallattach(String subcallattach) {
     this.subcallattach = subcallattach;
-  }
-
-  /**
-   * @return the subcallstatus
-   */
-  public String getSubcallstatus() {
-    return subcallstatus;
-  }
-
-  /**
-   * @param subcallstatus the subcallstatus to set
-   */
-  public void setSubcallstatus(String subcallstatus) {
-    this.subcallstatus = subcallstatus;
   }
 
   /**
