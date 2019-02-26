@@ -25,11 +25,16 @@ public class HeadPage {
   private String emailcontact;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date calldate;
+  private Integer callmodule;
   private String modulename;
+  private Integer callsubmodule;
   private String submodulename;
+  private Integer force;
   private String forcedesc;
+  private Integer problemtype;
   private String problemdesc;
   private String problem;
+  private Integer callchanel;
   private String attach;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date closedate;
@@ -40,6 +45,76 @@ public class HeadPage {
    */
   public String getRepperson() {
     return repperson;
+  }
+
+  /**
+   * @return the callchanel
+   */
+  public Integer getCallchanel() {
+    return callchanel;
+  }
+
+  /**
+   * @param callchanel the callchanel to set
+   */
+  public void setCallchanel(Integer callchanel) {
+    this.callchanel = callchanel;
+  }
+
+  /**
+   * @return the problemtype
+   */
+  public Integer getProblemtype() {
+    return problemtype;
+  }
+
+  /**
+   * @param problemtype the problemtype to set
+   */
+  public void setProblemtype(Integer problemtype) {
+    this.problemtype = problemtype;
+  }
+
+  /**
+   * @return the force
+   */
+  public Integer getForce() {
+    return force;
+  }
+
+  /**
+   * @param force the force to set
+   */
+  public void setForce(Integer force) {
+    this.force = force;
+  }
+
+  /**
+   * @return the callsubmodule
+   */
+  public Integer getCallsubmodule() {
+    return callsubmodule;
+  }
+
+  /**
+   * @param callsubmodule the callsubmodule to set
+   */
+  public void setCallsubmodule(Integer callsubmodule) {
+    this.callsubmodule = callsubmodule;
+  }
+
+  /**
+   * @return the callmodule
+   */
+  public Integer getCallmodule() {
+    return callmodule;
+  }
+
+  /**
+   * @param callmodule the callmodule to set
+   */
+  public void setCallmodule(Integer callmodule) {
+    this.callmodule = callmodule;
   }
 
   /**
