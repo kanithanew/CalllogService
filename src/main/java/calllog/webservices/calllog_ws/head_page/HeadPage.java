@@ -14,6 +14,7 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 public class HeadPage {
   @Id
   private Integer callid;
+  private String idopen;
   private String repperson;
   private String payunit;
   private String payunit_name;
@@ -25,6 +26,9 @@ public class HeadPage {
   private String emailcontact;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date calldate;
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private java.util.Date createdate;
+  private String helpdeskowner;
   private Integer callmodule;
   private String modulename;
   private Integer callsubmodule;
@@ -45,6 +49,34 @@ public class HeadPage {
    */
   public String getRepperson() {
     return repperson;
+  }
+
+  /**
+   * @return the idopen
+   */
+  public String getIdopen() {
+    return idopen;
+  }
+
+  /**
+   * @param idopen the idopen to set
+   */
+  public void setIdopen(String idopen) {
+    this.idopen = idopen;
+  }
+
+  /**
+   * @return the helpdeskowner
+   */
+  public String getHelpdeskowner() {
+    return helpdeskowner;
+  }
+
+  /**
+   * @param helpdeskowner the helpdeskowner to set
+   */
+  public void setHelpdeskowner(String helpdeskowner) {
+    this.helpdeskowner = helpdeskowner;
   }
 
   /**
