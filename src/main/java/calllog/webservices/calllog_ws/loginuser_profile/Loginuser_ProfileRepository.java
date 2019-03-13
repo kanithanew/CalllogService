@@ -14,7 +14,7 @@ public interface Loginuser_ProfileRepository
         extends JpaRepository<Loginuser_Profile, Long>, JpaSpecificationExecutor<Loginuser_Profile> {
     // Login Check Username and Password
  
-    String GET_USER_PROFILE = "SELECT * FROM gfmis_staff a LEFT JOIN gfmis_m_callposition b ON a.callposition = b.callpositionid WHERE a.calllogin = ?1 and a.callpassword = ?2";
+    String GET_USER_PROFILE = "SELECT * FROM gfmis_staff a LEFT JOIN gfmis_m_callposition b ON a.callposition = b.callpositionid left join gfmis_m_positionuser c ON a.positionid=c.positionid WHERE a.calllogin = ?1 and a.callpassword = ?2";
 
     @Query(value = GET_USER_PROFILE, nativeQuery = true)
     Collection<Loginuser_Profile> findLogin(String calllogin, String callpassword);

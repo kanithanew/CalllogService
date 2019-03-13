@@ -38,18 +38,12 @@ public class CustomerController {
     }
 
     @PostMapping()
-    /*
-     * public ResponseEntity<?> postCustomer(@Valid @RequestBody Customer body) {
-     * Customer customer = customerService.createCustomer(body); 
-     * return
-     * ResponseEntity.status(HttpStatus.CREATED).body(customer); }
-     */
-    public ResponseEntity<Customer> postCustomer(@RequestBody Customer body) {
-
-         Customer customer = customerService.createCustomer(body); 
-      return ResponseEntity.status(HttpStatus.CREATED).body(customer);
+    
+     public ResponseEntity<?> postCustomer(@Valid @RequestBody Customer body) {
+      Customer customer = customerService.createCustomer(body); 
+     return
+      ResponseEntity.status(HttpStatus.CREATED).body(customer); }
    
-    }
 
     @PutMapping("/{id}")
     public ResponseEntity<?> putCustomer(@PathVariable Long id, @Valid @RequestBody Customer body) {

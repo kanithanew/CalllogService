@@ -16,13 +16,65 @@ public class Loginuser_Profile {
   @Id
   private String calllogin;
   private String callusername;
-  private String positionuser;
+  private String positiondesc;
   private String callpositionid;
   private String callpositiondesc;
-  // private String callpassword;
-  // private String callposition;
-  // private String callstatus;
-  // private Date create_date;
-  // private Date update_date;
+
+  /**
+   * @return the callusername
+   */
+  public String getCallusername() {
+    return callusername;
+  }
+
+  /**
+   * @return the callpositiondesc
+   */
+  public String getCallpositiondesc() {
+    return callpositiondesc;
+  }
+
+  /**
+   * @param callpositiondesc the callpositiondesc to set
+   */
+  public void setCallpositiondesc(String callpositiondesc) {
+    this.callpositiondesc = callpositiondesc;
+  }
+
+  /**
+   * @return the callpositionid
+   */
+  public String getCallpositionid() {
+    return callpositionid;
+  }
+
+  /**
+   * @param callpositionid the callpositionid to set
+   */
+  public void setCallpositionid(String callpositionid) {
+    this.callpositionid = callpositionid;
+  }
+
+  /**
+   * @return the positiondesc
+   */
+  public String getPositiondesc() {
+    return positiondesc;
+  }
+
+  /**
+   * @param positiondesc the positiondesc to set
+   */
+  public void setPositiondesc(String positiondesc) {
+    this.positiondesc = positiondesc;
+  }
+
+  /**
+   * @param callusername the callusername to set
+   */
+  public void setCallusername(String callusername) {
+    this.callusername = callusername;
+  }
+
 
 }

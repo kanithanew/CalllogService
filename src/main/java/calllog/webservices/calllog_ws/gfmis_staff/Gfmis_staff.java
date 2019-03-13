@@ -15,27 +15,12 @@ public class Gfmis_staff{
    private String calllogin;
    private String callpassword;
   private String callusername;
-  private String positionuser;
 
   /**
    * @return the callpassword
    */
   public String getCallpassword() {
     return callpassword;
-  }
-
-  /**
-   * @return the positionuser
-   */
-  public String getPositionuser() {
-    return positionuser;
-  }
-
-  /**
-   * @param positionuser the positionuser to set
-   */
-  public void setPositionuser(String positionuser) {
-    this.positionuser = positionuser;
   }
 
   /**
