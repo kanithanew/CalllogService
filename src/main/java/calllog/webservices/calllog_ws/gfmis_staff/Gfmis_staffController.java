@@ -17,10 +17,10 @@ public class Gfmis_staffController {
     @Autowired
     Gfmis_staffService  gfmis_staffService;
 
-    @GetMapping()
+   /* @GetMapping()
     public List<Gfmis_staff> getLogin() {
         return gfmis_staffService.retrieveGfmis_staff();
-    }
+    }*/
     @GetMapping(params = "calllogin")
     public List<Gfmis_staff> getLogin(@RequestParam(value = "calllogin") String calllogin) {
         return gfmis_staffService.retrieveGfmis_staff(calllogin);

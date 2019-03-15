@@ -17,11 +17,6 @@ public class Detail_Updatepage_Controller {
     @Autowired
     Detail_Updatepage_Service  setail_updatepage_Service;
 
- /*   @GetMapping(params = "callid")
-    public List<Detail_Updatepage> getCallid(@RequestParam(value = "callid") Integer callid) {
-        return setail_updatepage_Service.retrieveCallid(callid);
-
-    }*/
     @PutMapping("/{callid}")
     public ResponseEntity<?> putCustomer(@PathVariable  Integer callid, @Valid @RequestBody Detail_Updatepage body) {
     
