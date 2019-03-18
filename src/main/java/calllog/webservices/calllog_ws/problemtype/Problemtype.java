@@ -13,4 +13,18 @@ public class Problemtype {
  
   private String problemid;
   private String problemdesc;
+
+  /**
+   * @return the problemdesc
+   */
+  public String getProblemdesc() {
+    return problemdesc;
+  }
+
+  /**
+   * @param problemdesc the problemdesc to set
+   */
+  public void setProblemdesc(String problemdesc) {
+    this.problemdesc = problemdesc;
+  }
 	}

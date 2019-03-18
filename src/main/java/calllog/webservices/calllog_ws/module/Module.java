@@ -15,4 +15,18 @@ public class Module {
  
   private String moduleid;
   private String modulename;
+
+  /**
+   * @return the modulename
+   */
+  public String getModulename() {
+    return modulename;
+  }
+
+  /**
+   * @param modulename the modulename to set
+   */
+  public void setModulename(String modulename) {
+    this.modulename = modulename;
+  }
 	}

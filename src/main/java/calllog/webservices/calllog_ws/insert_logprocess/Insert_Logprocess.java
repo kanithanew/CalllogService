@@ -26,5 +26,61 @@ public class Insert_Logprocess {
   private String fromuser;
   private String touser;
 
+  /**
+   * @return the callid
+   */
+  public Integer getCallid() {
+    return callid;
+  }
+
+  /**
+   * @return the touser
+   */
+  public String getTouser() {
+    return touser;
+  }
+
+  /**
+   * @param touser the touser to set
+   */
+  public void setTouser(String touser) {
+    this.touser = touser;
+  }
+
+  /**
+   * @return the fromuser
+   */
+  public String getFromuser() {
+    return fromuser;
+  }
+
+  /**
+   * @param fromuser the fromuser to set
+   */
+  public void setFromuser(String fromuser) {
+    this.fromuser = fromuser;
+  }
+
+  /**
+   * @return the logprocess
+   */
+  public String getLogprocess() {
+    return logprocess;
+  }
+
+  /**
+   * @param logprocess the logprocess to set
+   */
+  public void setLogprocess(String logprocess) {
+    this.logprocess = logprocess;
+  }
+
+  /**
+   * @param callid the callid to set
+   */
+  public void setCallid(Integer callid) {
+    this.callid = callid;
+  }
+
 
 	}

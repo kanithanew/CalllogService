@@ -13,4 +13,18 @@ public class Submodule {
  //submoduleid
   private String submoduleid;
   private String submodulename;
+
+  /**
+   * @return the submodulename
+   */
+  public String getSubmodulename() {
+    return submodulename;
+  }
+
+  /**
+   * @param submodulename the submodulename to set
+   */
+  public void setSubmodulename(String submodulename) {
+    this.submodulename = submodulename;
+  }
 	}
