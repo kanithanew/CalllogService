@@ -14,12 +14,12 @@ import java.util.List;
 
 public interface ReportCall_Repository extends JpaRepository<ReportCall, Long>, JpaSpecificationExecutor<ReportCall> {
 
-    String GET_REPORT = "SELECT e.* FROM (SELECT a.namecontact,a.payunit_name,a.callid,a.calldate,b.datetimesend,a.modulename,a.submodulename,a.problem,d.callusername as createname,c.callusername as repname,a.forcedesc,a.chaneldesc,null AS updateproblem,a.telcontact,   CASE  WHEN b.touser = 'Close' THEN 'Close'  ELSE 'Pending' END AS statuscall FROM all_headercall a     left join lasted_logprocess b  on a.callid=b.callid left join gfmis_staff c on a.calllogin = c.calllogin left join gfmis_staff d     on a.idopen = d.calllogin ORDER BY a.callid)e  WHERE  calldate  BETWEEN  ?1 AND ?2 AND statuscall='Pending'";
+    String GET_REPORT = "SELECT e.* FROM (SELECT a.namecontact,a.payunit_name,a.callid,a.calldate,b.datetimesend,a.modulename,a.submodulename,a.problem,d.callusername as createname,c.callusername as repname,a.forcedesc,a.chaneldesc,null AS updateproblem,a.telcontact,   CASE  WHEN b.touser = 'Close' THEN 'Close'  ELSE 'Pending' END AS statuscall FROM all_headercall a     left join lasted_logprocess b  on a.callid=b.callid left join gfmis_staff c on a.calllogin = c.calllogin left join gfmis_staff d     on a.idopen = d.calllogin ORDER BY a.callid)e  WHERE  calldate  BETWEEN  ?1 AND ?2 AND statuscall='Pending' order by e.callid";
 
     @Query(value = GET_REPORT, nativeQuery = true)
     Collection<ReportCall> findPendingCall(java.util.Date fromdate, java.util.Date todate);
 
-    String GET_REPORT2 = "SELECT e.* FROM (SELECT a.namecontact,a.payunit_name,a.callid,a.calldate,b.datetimesend,a.modulename,a.submodulename,a.problem,d.callusername as createname,c.callusername as repname,a.forcedesc,a.chaneldesc,null AS updateproblem,a.telcontact,   CASE  WHEN b.touser = 'Close' THEN 'Close'  ELSE 'Pending' END AS statuscall FROM all_headercall a     left join lasted_logprocess b  on a.callid=b.callid left join gfmis_staff c on a.calllogin = c.calllogin left join gfmis_staff d     on a.idopen = d.calllogin ORDER BY a.callid)e  WHERE  datetimesend  BETWEEN  ?1 AND ?2 AND statuscall='Close'";
+    String GET_REPORT2 = "SELECT e.* FROM (SELECT a.namecontact,a.payunit_name,a.callid,a.calldate,b.datetimesend,a.modulename,a.submodulename,a.problem,d.callusername as createname,c.callusername as repname,a.forcedesc,a.chaneldesc,null AS updateproblem,a.telcontact,   CASE  WHEN b.touser = 'Close' THEN 'Close'  ELSE 'Pending' END AS statuscall FROM all_headercall a     left join lasted_logprocess b  on a.callid=b.callid left join gfmis_staff c on a.calllogin = c.calllogin left join gfmis_staff d     on a.idopen = d.calllogin ORDER BY a.callid)e  WHERE  datetimesend  BETWEEN  ?1 AND ?2 AND statuscall='Close' order by e.callid";
 
     @Query(value = GET_REPORT2, nativeQuery = true)
     Collection<ReportCall> findCloseCall(java.util.Date fromdate, java.util.Date todate);

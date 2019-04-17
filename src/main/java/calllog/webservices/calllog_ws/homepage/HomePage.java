@@ -1,9 +1,12 @@
 package calllog.webservices.calllog_ws.homepage;
+
 import lombok.Data;
 
 import java.text.DateFormat;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 
 @Data
@@ -16,10 +19,13 @@ public class HomePage {
   private String modulename;
   private String submodulename;
   private String payunit;
-  private String calldate;
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private java.util.Date calldate;
   private String callusername;
   private String logprocess;
   private String status;
+  @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+  private java.util.Date datetimesend;
 
   /**
    * @return the touser
@@ -68,20 +74,6 @@ public class HomePage {
    */
   public void setCallusername(String callusername) {
     this.callusername = callusername;
-  }
-
-  /**
-   * @return the calldate
-   */
-  public String getCalldate() {
-    return calldate;
-  }
-
-  /**
-   * @param calldate the calldate to set
-   */
-  public void setCalldate(String calldate) {
-    this.calldate = calldate;
   }
 
   /**

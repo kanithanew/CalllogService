@@ -17,7 +17,7 @@ public interface SearchPayunit_Repository
 
  //   String GETDATA = "select * from province_relations where payunit like ";
    
-    String GETDATA = "select * from province_relations where payunit like ?1 and payunit_name like ?2 and department_name like ?3  and province_name like ?4  and ministry_name like ?5";
+    String GETDATA = "select * from province_relations where payunit like ?1 and payunit_name like ?2 and department_name like ?3  and province_name like ?4  and ministry_name like ?5 order by payunit";
     
     @Query(value = GETDATA, nativeQuery = true)
     Collection<SearchPayunit> findsearchpayunit(String payunit,String payunit_name,String department_name,String province_name,String ministry_name);

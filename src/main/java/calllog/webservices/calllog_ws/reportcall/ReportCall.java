@@ -13,9 +13,9 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 @Entity
 public class ReportCall {
   @Id
-  private String  namecontact;
-  private String payunit_name;
   private String callid;
+  private String namecontact;
+  private String payunit_name;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
   private java.util.Date calldate;
   @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
@@ -36,6 +36,20 @@ public class ReportCall {
    */
   public String getPayunit_name() {
     return payunit_name;
+  }
+
+  /**
+   * @return the namecontact
+   */
+  public String getNamecontact() {
+    return namecontact;
+  }
+
+  /**
+   * @param namecontact the namecontact to set
+   */
+  public void setNamecontact(String namecontact) {
+    this.namecontact = namecontact;
   }
 
   /**
