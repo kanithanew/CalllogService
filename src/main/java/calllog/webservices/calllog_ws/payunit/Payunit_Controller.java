@@ -20,6 +20,5 @@ public class Payunit_Controller {
     @GetMapping(params = "payunit")
     public List<Payunit> getPayUnit(@RequestParam(value = "payunit") String payunit) {
         return payunit_Service.retrievePayunit(payunit);
-
     }
 }

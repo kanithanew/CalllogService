@@ -1,10 +1,11 @@
 package calllog.webservices.calllog_ws.payunit;
+
 import lombok.Data;
 
 import java.text.DateFormat;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-
+import javax.persistence.Table;
 
 @Data
 @Entity
@@ -71,4 +72,7 @@ public class Payunit {
   public void setPayunit_name(String payunit_name) {
     this.payunit_name = payunit_name;
   }
-	}
+
+  public void setId(Object object) {
+  }
+}
