@@ -19,8 +19,8 @@ public class Update_SubModule_Controller {
 
       @PostMapping()
     public ResponseEntity<Update_SubModule> postCustomer(@RequestBody Update_SubModule body) {
-      Update_SubModule detail_payunit = update_submodule_Service.updateSubModule(body); 
-      return ResponseEntity.status(HttpStatus.CREATED).body(detail_payunit);
+      Update_SubModule detail_submodule = update_submodule_Service.updateSubModule(body); 
+      return ResponseEntity.status(HttpStatus.CREATED).body(detail_submodule);
    
     }
 }
