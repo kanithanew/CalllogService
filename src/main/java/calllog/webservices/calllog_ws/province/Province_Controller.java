@@ -17,7 +17,7 @@ public class Province_Controller {
     @Autowired
     Province_Service  province_Service;
 
-    @GetMapping(params = "province")
+    @GetMapping()
     public List<Province> getProvince() {
         return province_Service.retrieveProvince();
     }

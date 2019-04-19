@@ -17,7 +17,7 @@ public class Ministry_Controller {
     @Autowired
     Ministry_Service  ministry_Service;
 
-    @GetMapping(params = "ministry")
+    @GetMapping()
     public List<Ministry> getMinistry() {
         return ministry_Service.retrieveMinistry();
     }
