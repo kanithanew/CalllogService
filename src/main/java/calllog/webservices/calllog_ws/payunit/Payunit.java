@@ -13,8 +13,11 @@ public class Payunit {
   @Id
   private String payunit;
   private String payunit_name;
+  private String department_id;
   private String department_name;
+  private String ministry_id;
   private String ministry_name;
+  private String province_id;
   private String province_name;
 
   /**
@@ -22,6 +25,48 @@ public class Payunit {
    */
   public String getPayunit_name() {
     return payunit_name;
+  }
+
+  /**
+   * @return the province_id
+   */
+  public String getProvince_id() {
+    return province_id;
+  }
+
+  /**
+   * @param province_id the province_id to set
+   */
+  public void setProvince_id(String province_id) {
+    this.province_id = province_id;
+  }
+
+  /**
+   * @return the ministry_id
+   */
+  public String getMinistry_id() {
+    return ministry_id;
+  }
+
+  /**
+   * @param ministry_id the ministry_id to set
+   */
+  public void setMinistry_id(String ministry_id) {
+    this.ministry_id = ministry_id;
+  }
+
+  /**
+   * @return the department_id
+   */
+  public String getDepartment_id() {
+    return department_id;
+  }
+
+  /**
+   * @param department_id the department_id to set
+   */
+  public void setDepartment_id(String department_id) {
+    this.department_id = department_id;
   }
 
   /**

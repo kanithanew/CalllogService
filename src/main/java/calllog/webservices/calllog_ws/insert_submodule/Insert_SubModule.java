@@ -1,4 +1,4 @@
-package calllog.webservices.calllog_ws.update_submodule;
+package calllog.webservices.calllog_ws.insert_submodule;
 
 import lombok.Data;
 
@@ -12,8 +12,9 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "gfmis_m_submodule")
-public class Update_SubModule {
+public class Insert_SubModule {
   @Id
+  @GeneratedValue(strategy = GenerationType.AUTO, generator = "id_submodule")
   private int submoduleid;
   private int moduleid;
   private String submodulename;

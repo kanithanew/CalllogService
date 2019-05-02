@@ -15,7 +15,7 @@ import java.util.List;
 public interface Payunit_Repository
         extends JpaRepository<Payunit, Long>, JpaSpecificationExecutor<Payunit> {
 
-    String GET_PAYUNIT = "select payunit,payunit_name,department_name,ministry_name,province_name from province_relations where payunit=?1" ;
+    String GET_PAYUNIT = "select payunit,payunit_name,department_id,department_name,ministry_id,ministry_name,province_id,province_name  from province_relations where payunit=?1" ;
     @Query(value = GET_PAYUNIT, nativeQuery = true)
     Collection<Payunit> findpayunit(String payunit);
 
