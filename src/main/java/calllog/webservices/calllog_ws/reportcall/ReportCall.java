@@ -8,10 +8,13 @@ import javax.persistence.Id;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import org.springframework.beans.factory.annotation.Value;
+
 
 @Data
 @Entity
 public class ReportCall {
+
   @Id
   private String callid;
   private String namecontact;
@@ -37,7 +40,6 @@ public class ReportCall {
   public String getPayunit_name() {
     return payunit_name;
   }
-
   /**
    * @return the namecontact
    */

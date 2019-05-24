@@ -24,5 +24,11 @@ public class Loginuser_ProfileController {
         return loginuser_profileService.retrieveLoginuser_Profile(calllogin, callpassword);
 
     }
+    @GetMapping(params = "getcalllogin")
+    public List<Loginuser_Profile> getLoginuser_Profile(@RequestParam(value = "getcalllogin") String calllogin) {
+ 
+        return loginuser_profileService.retrieveLoginuser(calllogin);
+
+    }
 
 }

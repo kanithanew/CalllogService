@@ -10,9 +10,6 @@ import javax.management.loading.ClassLoaderRepository;
 
 @Service
 public class SearchPayunit_Service {
-    /**
-     *
-     */
 
     private SearchPayunit_Repository searchpayunit_repository;
 

@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "CodeLens (Launch) - ReportCall_Jasper_Service",
+            "request": "launch",
+            "mainClass": "calllog.webservices.calllog_ws.reportcall_jasper.ReportCall_Jasper_Service",
+            "projectName": "calllog_ws"
+        },
+        {
+            "type": "java",
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}"

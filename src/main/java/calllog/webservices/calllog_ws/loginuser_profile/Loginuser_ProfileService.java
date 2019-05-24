@@ -20,5 +20,8 @@ public class Loginuser_ProfileService {
     public List<Loginuser_Profile> retrieveLoginuser_Profile(String calllogin, String callpassword) { 
         return (List<Loginuser_Profile>) loginuser_profileRepository.findLogin(calllogin, callpassword);
     }
+    public List<Loginuser_Profile> retrieveLoginuser(String calllogin) { 
+        return (List<Loginuser_Profile>) loginuser_profileRepository.findGetUser(calllogin);
+    }
 
 }

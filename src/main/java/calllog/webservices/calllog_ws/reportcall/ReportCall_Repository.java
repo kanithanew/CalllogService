@@ -25,7 +25,7 @@ public interface ReportCall_Repository extends JpaRepository<ReportCall, Long>, 
     Collection<ReportCall> findCloseCall(java.util.Date fromdate, java.util.Date todate);
 
     // findPending
-    String GET_REPORT3 = "SELECT e.* FROM ( SELECT a.namecontact,a.payunit_name,a.callid,a.calldate,b.datetimesend,a.modulename,a.submodulename,a.problem,d.callusername as createname,c.callusername as repname,a.forcedesc,a.chaneldesc,a.telcontact,CASE WHEN b.touser = 'Close' THEN 'Close' ELSE 'Pending' END AS statuscall,f.updateproblem  FROM all_headercall a  left join lasted_logprocess b  on a.callid=b.callid  left join gfmis_staff c on a.calllogin = c.calllogin left join gfmis_staff d on a.idopen = d.calllogin left join lasted_subcall f on a.callid=f.callid ORDER BY a.callid)e  WHERE  datetimesend <= ?1 AND statuscall='Pending'";
+    String GET_REPORT3 = "SELECT e.* FROM ( SELECT a.namecontact,a.payunit_name,a.callid,a.calldate,b.datetimesend,a.modulename,a.submodulename,a.problem,d.callusername as createname,c.callusername as repname,a.forcedesc,a.chaneldesc,a.telcontact,CASE WHEN b.touser = 'Close' THEN 'Close' ELSE 'Pending' END AS statuscall,f.updateproblem  FROM all_headercall a  left join lasted_logprocess b  on a.callid=b.callid  left join gfmis_staff c on a.calllogin = c.calllogin left join gfmis_staff d on a.idopen = d.calllogin left join lasted_subcall f on a.callid=f.callid ORDER BY a.callid)e  WHERE  calldate <= ?1 AND statuscall='Pending'";
 
     @Query(value = GET_REPORT3, nativeQuery = true)
     Collection<ReportCall> findPending(java.util.Date date);
